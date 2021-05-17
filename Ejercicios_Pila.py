@@ -28,8 +28,8 @@ for i in range (0, len(datos)):
                 pila_numeros.apilar(pila_aux.desapilar())
 
 
-# while(not pila_numeros.pila_vacia()):
-#     print(pila_numeros.desapilar())
+while(not pila_numeros.pila_vacia()):
+    print(pila_numeros.desapilar())
 
 #!-----------------------//EJERCICIO 16//----------------------------!#
 # Se tienen dos pilas con personajes de Star Wars, en una los del episodio V de “The empire
@@ -113,8 +113,6 @@ for (a,b,c) in datos_din:
 for (a,b,c) in datos_fett:
     mision = Mision(a, b, c)
     pila_fett.apilar(mision)
-
-#! Punto a
 
 total_din = 0
 while(not pila_din.pila_vacia()):

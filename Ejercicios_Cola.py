@@ -75,34 +75,34 @@ def eliminar_personaje_despues (cola, personaje):
     while (not cola_aux.cola_vacia()):
         cola.arribo(cola_aux.atencion())
 
-# # a. mostrar los personajes del planeta Alderaan, Endor y Tatooine
+# a. mostrar los personajes del planeta Alderaan, Endor y Tatooine
 
-# mostrar_personajes(cola_personajes, 'Alderaan')
-# print ()
-# mostrar_personajes(cola_personajes, 'Endor')
-# print ()
-# mostrar_personajes(cola_personajes, 'Tatooine')
-# print ()
+mostrar_personajes(cola_personajes, 'Alderaan')
+print ()
+mostrar_personajes(cola_personajes, 'Endor')
+print ()
+mostrar_personajes(cola_personajes, 'Tatooine')
+print ()
 
-# # b. indicar el planeta natal de Luke Skywalker y Han Solo
+# b. indicar el planeta natal de Luke Skywalker y Han Solo
 
-# planeta_natal(cola_personajes, 'Luke Skywalker')
-# planeta_natal(cola_personajes, 'Han Solo')
-# print ()
+planeta_natal(cola_personajes, 'Luke Skywalker')
+planeta_natal(cola_personajes, 'Han Solo')
+print ()
 
-# # c. insertar un nuevo personaje antes del maestro Yoda
+# c. insertar un nuevo personaje antes del maestro Yoda
 
-# personaje2 = Personaje ('Rey', 'Jakku')
-# insertar_personaje_antes(cola_personajes, 'Yoda', personaje2)
-
-
-# # d. eliminar el personaje ubicado después de Jar Jar Binks
-
-# eliminar_personaje_despues(cola_personajes, 'Jar Jar Binks')
+personaje2 = Personaje ('Rey', 'Jakku')
+insertar_personaje_antes(cola_personajes, 'Yoda', personaje2)
 
 
-# while not cola_personajes.cola_vacia():
-#     print (cola_personajes.atencion())
+# d. eliminar el personaje ubicado después de Jar Jar Binks
+
+eliminar_personaje_despues(cola_personajes, 'Jar Jar Binks')
+
+
+while not cola_personajes.cola_vacia():
+    print (cola_personajes.atencion())
 
 #!-----------------------//EJERCICIO 12//----------------------------!#
 # Dada dos colas con valores ordenadas, realizar un algoritmo que permita combinarlas en una
@@ -135,8 +135,9 @@ while not cola1.cola_vacia():
 while not cola2.cola_vacia(): #para cuando la segunda cola tiene mas elementos que la primera
     cola3.arribo(cola2.atencion())
 
-# while not cola3.cola_vacia():
-#     print (cola3.atencion())
+while not cola3.cola_vacia():
+    print (cola3.atencion())
+
 
 #!-----------------------//EJERCICIO 22//----------------------------!#
 # 22. Se tienen una cola con personajes de Marvel Cinematic Universe (MCU), de los cuales se conoce
@@ -185,7 +186,7 @@ while not cola_personajes.cola_vacia():
     if (x.nombre == 'Scott Lang'):
         print ('El nombre de superhéroe de', x.nombre, 'es', x.alter_ego)
     if (x.nombre == 'Carol Danvers'):
-        print (x.nombre, 'se encuentra en la lista y su nombre de superhéroe es', x.alter_ego)
+        print (x.nombre, 'se encuentra en la cola y su nombre de superhéroe es', x.alter_ego)
     if (x.nombre[0]=='S' or x.alter_ego[0]=='S'):
         cola_S.arribo(x)
     if (x.genero == 'F'):

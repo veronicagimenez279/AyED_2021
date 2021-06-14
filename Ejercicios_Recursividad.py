@@ -92,4 +92,3 @@ laberinto =     [[1, 1, 1, 1, 0],
 #     print ('El laberinto no tiene salida.')
 # else:
 #     salida_del_laberinto(laberinto, 0, 0)
-

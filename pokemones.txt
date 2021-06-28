@@ -1,0 +1,13 @@
+Nombre;Nivel;Tipo;Subtipo;ID
+Mudkip;10;Agua;-;001
+Blastoise;50;Agua;-;001
+Torterra;120;Planta;Tierra;002
+Snorlax;80;Normal;-;002
+Squirtle;15;Agua;-;003
+Squirtle;51;Agua;-;003
+Gengar;25;Fantasma;Veneno;002
+Meganium;30;Planta;-;004
+Blaziken;110;Fuego;Lucha;004
+Wingull;55;Agua;Volador;001
+Gyarados;15;Agua;Volador;003
+Gengar;55;Fantasma;Veneno;003

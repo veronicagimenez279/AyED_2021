@@ -339,10 +339,6 @@ poke = input('Ingrese el nombre del Pokemon para determinar cuantos entrenadores
 print (entrenadores_pokemon(poke, entrenadores), 'entrenador(es) tiene(n) a', poke)
 print()
 
-# i. mostrar los entrenadores que tienen Pokémons repetidos;
-
-
-
 # j. determinar los entrenadores que tengan uno de los siguientes Pokémons: Tyrantrum, Terrakion o Wingull;
 print('Los entrenadores que tienen un Tyrantrum, Terrakion o Wingull son:')
 for i in range(entrenadores.tamanio()):

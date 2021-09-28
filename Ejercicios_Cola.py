@@ -1,4 +1,5 @@
 from cola import Cola
+from heap import HeapMax
 
 #!-----------------------//EJERCICIO 11//----------------------------!#
 
@@ -137,6 +138,60 @@ while not cola2.cola_vacia(): #para cuando la segunda cola tiene mas elementos q
 
 while not cola3.cola_vacia():
     print (cola3.atencion())
+
+
+
+#!-----------------------//EJERCICIO 16//----------------------------!#
+
+# Utilice cola de prioridad, para atender la cola de impresión tomando en cuenta el siguiente
+# criterio (1- empleados, 2- staff de tecnologías de la información “TI”, 3- gerente), y resuelva la
+# siguiente situación:
+
+cola_prioridad = HeapMax()
+
+#! ---- PUNTO A ----!#
+# a. cargue tres documentos de empleados (cada documento se representa solamente con
+# un nombre).
+cola_prioridad.arribo('DocumentoEmpleado1', 1)
+cola_prioridad.arribo('DocumentoEmpleado2', 1)
+cola_prioridad.arribo('DocumentoEmpleado3', 1)
+
+
+#! ---- PUNTO B ----!#
+# b. imprima el primer documento de la cola (solamente mostrar el nombre de este por pantalla).
+print(cola_prioridad.atencion()[1])
+print()
+
+
+#! ---- PUNTO C ----!#
+# c. cargue dos documentos del staff de TI.
+cola_prioridad.arribo('DocumentoTI1', 2)
+cola_prioridad.arribo('DocumentoTI2', 2)
+
+
+#! ---- PUNTO D ----!#
+# d. cargue un documento del gerente.
+cola_prioridad.arribo('DocumentoGerente1', 3)
+
+#! ---- PUNTO E ----!#
+# e. imprima los dos primeros documentos de la cola.
+print(cola_prioridad.atencion()[1])
+print(cola_prioridad.atencion()[1])
+print()
+
+#! ---- PUNTO F ----!#
+# f. cargue dos documentos de empleados y uno de gerente.
+cola_prioridad.arribo('DocumentoEmpleado4', 1)
+cola_prioridad.arribo('DocumentoEmpleado5', 1)
+cola_prioridad.arribo('DocumentoGerente2', 3)
+
+#! ---- PUNTO G ----!#
+# g. imprima todos los documentos de la cola de impresión.
+while (not cola_prioridad.vacio()):
+    print(cola_prioridad.atencion()[1])
+
+print()
+
 
 
 #!-----------------------//EJERCICIO 22//----------------------------!#

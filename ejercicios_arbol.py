@@ -1,86 +1,6 @@
 from arbol_binario import Arbol
 from random import randint
 
-#! -------------------------- // EJERCICIO 01 // -------------------------- !#
-
-# 1. Desarrollar un algoritmo que permita cargar 1000 número enteros –generados de manera aleatoria–
-# que resuelva las siguientes actividades:
-# a. realizar los barridos preorden, inorden, postorden ****y por nivel sobre el árbol generado
-# b. determinar si un número está cargado en el árbol o no;
-# c. eliminar tres valores del árbol;
-# d. determinar la altura del subárbol izquierdo y del subárbol derecho;
-# e. determinar la cantidad de ocurrencias de un elemento en el árbol;
-# f. contar cuántos números pares e impares hay en el árbol.
-
-# arbol = Arbol()
-
-# for i in range (10):
-#     arbol.insertar_nodo(randint(1,6))
-
-#! ---- PUNTO A ----!#
-# print('inorden') #menor a mayor
-# arbol.inorden()
-# print()
-# print('posorden') #mayor a menor
-# arbol.postorden()
-# print()
-# print('preorden') #orden de como se fue cargando
-# arbol.preorden()
-
-
-#! ---- PUNTO B ----!#
-# pos = arbol.busqueda(int(input('ingrese el valor a buscar')))
-# if (pos is not None):
-#     print ('el valor esta', pos.info)
-# else:
-#     print ('el valor no esta')
-
-
-#! ---- PUNTO C ----!#
-# pos = arbol.eliminar_nodo(int(input('ingrese el valor a eliminar')))
-# print('inorden') #menor a mayor
-# arbol.inorden()
-
-
-#! ---- PUNTO E ----!#
-# num = int(input('Ingrese un valor para determinar el numero de ocurrencias: '))
-# ocurrencias = arbol.contar_ocurrencias(num)
-# print ('La cantidad de ocurrencias es:', ocurrencias)
-
-
-#! ---- PUNTO F ----!#
-# pares, impares = arbol.contar_pares_impares()
-# print ('La cantidad de numeros pares es', pares, 'y de impares es', impares)
-
-
-#! -------------------------- // EJERCICIO 02 // -------------------------- !#
-
-
-
-
-
-#! -------------------------- // EJERCICIO 03 // -------------------------- !#
-
-
-
-
-
-#! -------------------------- // EJERCICIO 04 // -------------------------- !#
-# Implementar un algoritmo que contemple dos funciones, la primera que devuelva el hijo derecho
-# de un nodo y la segunda que devuelva el hijo izquierdo.
-
-datos = ['Q','W', 'E', 'R', 'T', 'Y', 'U', 'C', 'A', 'G']
-arbol_04 = Arbol()
-
-for i in range (len(datos)):
-    arbol_04 = arbol_04.insertar_nodo(datos[i])
-
-# arbol_04.preorden()
-# print('Hijo a la derecha de W:')
-# arbol_04.hijo_derecho('W')
-# print('Hijo a la izquierda de E:')
-# arbol_04.hijo_izquierdo('E')
-
 
 #! -------------------------- // EJERCICIO 05 // -------------------------- !#
 # 5. Dado un árbol con los nombre de los superhéroes y villanos de la saga Marvel Cinematic Universe
@@ -119,174 +39,54 @@ for personaje in datos:
 
 # arbol.preorden()
 
-# #! ---- PUNTO B ----!#
-# print('Villanos ordenados alfabeticamente:')
-# arbol.inorden_villanos()
-# print()
+#! ---- PUNTO B ----!#
+print('Villanos ordenados alfabeticamente:')
+arbol.inorden_villanos()
+print()
 
-# #! ---- PUNTO C ----!#
-# print('Superheroes que empiezan con C')
-# arbol.inorden_heroes_C()
-# print()
+#! ---- PUNTO C ----!#
+print('Superheroes que empiezan con C')
+arbol.inorden_heroes_C()
+print()
 
-# #! ---- PUNTO D ----!#
-# print('En el arbol hay', arbol.contar_nodos(True), 'heroes.')
-# print()
+#! ---- PUNTO D ----!#
+print('En el arbol hay', arbol.contar_nodos(True), 'heroes.')
+print()
 
-# # ! ---- PUNTO E ----!#
-# buscado = input('Comience a escribir el nombre del personaje que desea cambiar: ')
-# arbol.busqueda_proximidad(buscado)
-# buscado = input('Ingrese el nombre completo del personaje que desea cambiar de la lista anterior: ')
-# pos = arbol.busqueda(buscado)
-# if (pos):
-#     nuevo_nombre = input('Ingrese el nuevo nombre: ')
-#     nombre, superheroe = arbol.eliminar_nodo(buscado)
-#     superheroe['nombre'] = nuevo_nombre
-#     arbol = arbol.insertar_nodo(nuevo_nombre, superheroe)
-# print()
+#! ---- PUNTO E ----!#
+buscado = input('Comience a escribir el nombre del personaje que desea cambiar: ')
+arbol.busqueda_proximidad(buscado)
+buscado = input('Ingrese el nombre completo del personaje que desea cambiar de la lista anterior: ')
+pos = arbol.busqueda(buscado)
+if (pos):
+    nuevo_nombre = input('Ingrese el nuevo nombre: ')
+    nombre, superheroe = arbol.eliminar_nodo(buscado)
+    superheroe['nombre'] = nuevo_nombre
+    arbol = arbol.insertar_nodo(nuevo_nombre, superheroe)
+print()
 # arbol.inorden()
 
-# #! ---- PUNTO F ----!#
-# print('Superheroes ordenados de manera descendente:')
-# arbol.postorden_heroes()
-# print()
+#! ---- PUNTO F ----!#
+print('Superheroes ordenados de manera descendente:')
+arbol.postorden_heroes()
+print()
 
-# # #! ---- PUNTO G ----!#
+#! ---- PUNTO G ----!#
 
-# # actualizar_altura afecta a separar_arbol y a la insercion adentro de la funcion
+arbol_heroes = Arbol()
+arbol_villanos = Arbol()
 
-# arbol_heroes = Arbol()
-# arbol_villanos = Arbol()
+arbol.separar_arbol(arbol_heroes, True)
+print('Arbol de superheroes:')
+arbol_heroes.inorden()
+print('El arbol de superheroes tiene', arbol_heroes.contar_nodos(True), 'nodos.')
+print()
 
-# arbol.separar_arbol(arbol_heroes, True)
-# print('Arbol de superheroes:')
-# arbol_heroes.inorden()
-# print('El arbol de superheroes tiene', arbol_heroes.contar_nodos(True), 'nodos.')
-# print()
-
-# arbol.separar_arbol(arbol_villanos, False)
-# print('Arbol de villanos:')
-# arbol_villanos.inorden()
-# print('El arbol de villanos tiene', arbol_villanos.contar_nodos(False), 'nodos.')
-# print()
-
-
-
-#! -------------------------- // EJERCICIO 06 // -------------------------- !#
-# Dado un archivo con todos los Jedi, de los que se cuenta con: nombre, especie, año de nacimiento,
-# color de sable de luz, ranking (Jedi Master, Jedi Knight, Padawan) y maestro, los últimos
-# tres campos pueden tener más de un valor. Escribir las funciones necesarias para resolver las
-# siguientes consignas:
-# a. crear tres árboles de acceso a los datos: por nombre, ranking y especie;
-# b. realizar un barrido inorden del árbol por nombre y ranking;
-# c. realizar un barrido por nivel de los árboles por ranking y especie;
-# d. mostrar toda la información de Yoda y Luke Skywalker;
-# e. mostrar todos los Jedi con ranking “Jedi Master”;
-# f. listar todos los Jedi que utilizaron sabe de luz color verde;
-# g. listar todos los Jedi cuyos maestros están en el archivo;
-# h. mostrar todos los Jedi de especie “Togruta” o “Cerean”;
-# i. listar los Jedi que comienzan con la letra A y los que contienen un “-” en su nombre.
-
-arbol_jedis = Arbol()
-arbol_rank = Arbol()
-arbol_especie = Arbol()
-
-file = open('jedis.txt', encoding="utf8")
-lineas = file.readlines()
-lineas.pop(0)
-for linea in lineas:
-    jedi = linea.split(';')
-    jedi_data = {}
-    jedi_data['name'] = jedi[0].title()
-    jedi_data['rank'] = jedi[1].title()
-    jedi_data['species'] = jedi[2]
-    jedi_data['master'] = jedi[3].title().split('/')
-    jedi_data['lightsaber_color'] = jedi[4].split('/')
-    jedi_data['homeworld'] = jedi[5].title()
-    jedi_data['birth_year'] = jedi[6]
-    jedi_data['height'] = float(jedi[7].split('\n')[0])
-    if len(jedi) > 8:
-        jedi_data['to_darkside'] = jedi[8]
-        jedi_data['come_lightside'] =jedi[9]
-
-    #! ---- PUNTO A ----!#
-    arbol_jedis = arbol_jedis.insertar_nodo(jedi_data['name'], jedi_data)
-    arbol_rank = arbol_rank.insertar_nodo(jedi_data['rank'], jedi_data)
-    arbol_especie = arbol_especie.insertar_nodo(jedi_data['species'], jedi_data)
-
-# #! ---- PUNTO B ----!#
-# print('Barrido inorden por nombres:')
-# arbol_jedis.inorden_jedis()
-# print()
-# print()
-# print('Barrido inorden por ranking:')
-# arbol_rank.inorden_jedis()
-
-# print()
-# print()
-# #! ---- PUNTO C ----!#
-
-# print('Barrido por nivel del arbol por ranking:')
-# arbol_rank.barrido_por_nivel_jedi()
-# print()
-# print()
-# print('Barrido por nivel del arbol por especie:')
-# arbol_especie.barrido_por_nivel_jedi()
-# print()
-# print()
-
-#! -------------------------- // EJERCICIO XX // -------------------------- !#
-
-
-
-
-
-#! -------------------------- // EJERCICIO XX // -------------------------- !#
-
-
-
-
-
-#! -------------------------- // EJERCICIO XX // -------------------------- !#
-
-
-
-
-
-#! -------------------------- // EJERCICIO XX // -------------------------- !#
-
-
-
-
-
-#! -------------------------- // EJERCICIO XX // -------------------------- !#
-
-
-
-
-
-#! -------------------------- // EJERCICIO XX // -------------------------- !#
-
-
-
-
-
-#! -------------------------- // EJERCICIO XX // -------------------------- !#
-
-
-
-
-
-#! -------------------------- // EJERCICIO XX // -------------------------- !#
-
-
-
-
-
-#! -------------------------- // EJERCICIO XX // -------------------------- !#
-
-
-
+arbol.separar_arbol(arbol_villanos, False)
+print('Arbol de villanos:')
+arbol_villanos.inorden()
+print('El arbol de villanos tiene', arbol_villanos.contar_nodos(False), 'nodos.')
+print()
 
 
 #! -------------------------- // EJERCICIO 16 // -------------------------- !#
@@ -298,10 +98,7 @@ for linea in lineas:
 # a. la información transmitida por el nano satélite son estado del tiempo, humedad del suelo,
 # y tres dígitos que identifican el lote al cual pertenecen los datos;
 # b. desarrollar un árbol de Huffman que permita comprimir la información para transmitirla,
-# la frecuencia de la información transmitida se observa en la siguiente tabla:
-
-# VER TABLA EN PAGINA 165
-
+# la frecuencia de la información transmitida se observa en la tabla
 # c. comprimir un mensaje y descomprimirlo, para ver si no se pierde información durante el
 # proceso de codificación, la trama enviada por el nano satélite tiene el siguiente formato
 # (estado del clima-humedad del suelo-cod1-cod2-cod3), por ejemplo la siguiente trama es
@@ -360,15 +157,10 @@ import re
 def codificar (cadena, dic):
     cadena_cod = ''
     palabras_lista = re.findall('[A-Z][^A-Z]*', re.findall('[a-zA-Z]+', cadena)[0])
-    # separa las palabras teniendo en cuenta la mayuscula como separador, 
-    # en una cadena (re.findall('[a-zA-Z]+', cadena)[0]) que consiste en unicamente de letras (sin los numeros del final)
-    # y utiliza el indice [0] ya que se guarda en una lista como su unico elemento
     numeros_lista = [int(digito) for digito in (re.findall('\d+', cadena)[0])]
-    # separa a numeros consecutivos en numeros individuales, utilizando como cadena a la que se crea de separar
-    # a los numeros de las letras en la cadena original (re.findall('\d+', cadena)[0]). 
-    # utiliza [0] ya que lo va a guardar como una cadena en una lista donde es el unico elemento 
+
     lista = []
-    for elemento in palabras_lista: #se puede omitir usar las variables palabras_lista y numeros_lista pero es mas claro asi
+    for elemento in palabras_lista: 
         lista.append(elemento)
     for elemento in numeros_lista:
         lista.append(str(elemento))
@@ -393,27 +185,15 @@ def decodificar (cadena_cod, arbol_huff):
     return cadena_deco
 
 # #! ---- PUNTO C ----!#
-# cadena = "NubladoBaja157"
-# cadena_cod = codificar(cadena, dic)
-# print (cadena_cod)
-# print(decodificar(cadena_cod, arbol_huffman))
+cadena = "NubladoBaja157"
+cadena_cod = codificar(cadena, dic)
+print (cadena_cod)
+print(decodificar(cadena_cod, arbol_huffman))
 
 # #! ---- PUNTO D ----!#
-# from sys import getsizeof
-# print('Tamaño de',cadena, ':', getsizeof(cadena))
-# print('Tamaño de', cadena_cod, ':', getsizeof(b'1111001000111101010'))
-
-
-#! -------------------------- // EJERCICIO XX // -------------------------- !#
-
-
-
-
-
-#! -------------------------- // EJERCICIO XX // -------------------------- !#
-
-
-
+from sys import getsizeof
+print('Tamaño de',cadena, ':', getsizeof(cadena))
+print('Tamaño de', cadena_cod, ':', getsizeof(b'1111001000111101010'))
 
 
 #! -------------------------- // EJERCICIO 23 // -------------------------- !#
@@ -436,8 +216,6 @@ def decodificar (cadena_cod, arbol_huff):
 # l. modifique el nombre de la criatura Ladón por Dragón Ladón;
 # m. realizar un listado por nivel del árbol;
 # n. muestre las criaturas capturadas por Heracles.
-
-# TABLA PAGINA 169
 
 datos = [ 
     {'nombre' : 'Ceto', 'capturada' : '', 'descripcion' : ''},
@@ -506,17 +284,6 @@ arbol_criaturas.mostrar_informacion('Talos')
 print()
 
 #! ---- PUNTO D ----!#
-
-# def como_comparo (elemento):
-#     return elemento[1] # ordena la lista por cantidad de capturas
-
-# lista = []
-# lista = arbol_criaturas.capturas_por_heroe(nombres_heroes)
-# lista.sort(key=como_comparo, reverse=True) #ordena de mayor a menor
-# print('Los 3 heroes o dioses que derrotaron a la mayor cantidad de criaturas son:')
-# for i in range (3):
-#     print(lista[i][0], '(derroto a', lista[i][1], 'criatura(s))')
-# print()
 
 dic = {}
 arbol_criaturas.contador_criaturas_derrotadas(dic)

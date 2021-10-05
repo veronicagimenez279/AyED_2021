@@ -320,11 +320,12 @@ class Arbol (object):
         """Separa los elementos del arbol en base a la categoria dada (True para heroes, False para villanos)."""
         if(self.info is not None):
             if (self.datos['heroe'] == categoria):
-                arbol_aux.insertar_nodo(self.info, self.datos)
+                arbol_aux = arbol_aux.insertar_nodo(self.info, self.datos)
             if(self.izq is not None):
-                self.izq.separar_arbol(arbol_aux, categoria)
+                arbol_aux = self.izq.separar_arbol(arbol_aux, categoria)
             if(self.der is not None):
-                self.der.separar_arbol(arbol_aux, categoria)
+                arbol_aux = self.der.separar_arbol(arbol_aux, categoria)
+        return arbol_aux
 
 
 

@@ -76,7 +76,7 @@ for personaje in datos:
 arbol_heroes = Arbol()
 arbol_villanos = Arbol()
 
-arbol.separar_arbol(arbol_heroes, True)
+arbol_heroes = arbol.separar_arbol(arbol_heroes, True)
 print('Arbol de superheroes:')
 arbol_heroes.inorden()
 print('El arbol de superheroes tiene', arbol_heroes.contar_nodos(True), 'nodos.')
@@ -84,6 +84,6 @@ print()
 
 arbol.separar_arbol(arbol_villanos, False)
 print('Arbol de villanos:')
-arbol_villanos.inorden()
+arbol_villanos = arbol_villanos.inorden()
 print('El arbol de villanos tiene', arbol_villanos.contar_nodos(False), 'nodos.')
 print()

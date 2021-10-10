@@ -187,7 +187,7 @@ def decodificar (cadena_cod, arbol_huff):
 # #! ---- PUNTO C ----!#
 cadena = "NubladoBaja157"
 cadena_cod = codificar(cadena, dic)
-print (cadena, 'codificada: ',cadena_cod)
+print (cadena, 'codificada:', cadena_cod)
 print(cadena_cod, 'decodificada:', decodificar(cadena_cod, arbol_huffman))
 print()
 
@@ -258,8 +258,6 @@ datos = [
     {'nombre' : 'Cerbero', 'capturada' : '', 'descripcion' : ''},
     {'nombre' : 'Jabalí de Erimanto', 'capturada' : '', 'descripcion' : ''} 
 ]
-
-nombres_heroes = ['Zeus', 'Argos Panoptes', 'Perseo', 'Heracles', 'Belerofonte', 'Edipo', 'Teseo', 'Atalanta', 'Hermes', 'Medea', 'Apolo']
 
 arbol_criaturas = Arbol()
 

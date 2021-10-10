@@ -1,6 +1,4 @@
 from arbol_binario import Arbol
-from random import randint
-
 
 #! -------------------------- // EJERCICIO 05 // -------------------------- !#
 # 5. Dado un árbol con los nombre de los superhéroes y villanos de la saga Marvel Cinematic Universe

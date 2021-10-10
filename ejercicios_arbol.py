@@ -319,13 +319,13 @@ arbol_criaturas.modificar_captura('Jabalí de Erimanto', 'Heracles')
 print()
 # arbol_criaturas.inorden_criaturas()
 
-#! ---- PUNTO H ----!#
+#! ---- PUNTO I ----!#
 clave = input('Comience a escribir parte del nombre de una criatura para buscarla: ')
 print('Criaturas que contienen "', clave, '" en su nombre:' )
 arbol_criaturas.busqueda_por_coincidencia(clave)
 print()
 
-#! ---- PUNTO H ----!#
+#! ---- PUNTO J ----!#
 # j. eliminar al Basilisco y a las Sirenas;
 info, datos = arbol_criaturas.eliminar_nodo('Basilisco')
 print (info, 'ha sido eliminado')

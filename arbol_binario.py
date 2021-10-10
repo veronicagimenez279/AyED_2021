@@ -329,31 +329,6 @@ class Arbol (object):
 
 
 
-#! ----- COMIENZO FUNCIONES EJERCICIO 6 GUIA DE EJERCICIOS ----- #!  
-
-    def inorden_jedis (self):
-        """Realiza un barrido inorden del arbol de jedis."""
-        if (self.info is not None):
-            if (self.izq is not None):
-                self.izq.inorden_jedis()
-            print('• Nombre:', self.datos['name'], ' | Rango:', self.datos['rank'], ' | Especie:', self.datos['species'], ' | Maestro(s):', self.datos['master'])
-            print ('  Color de sable de luz:', self.datos['lightsaber_color'], ' | Planeta natal:', self.datos['homeworld'], ' | Año de nacimiento:', self.datos['birth_year'], ' | Altura:', self.datos['height'])
-            if (self.der is not None):
-                self.der.inorden_jedis()
-    
-    def barrido_por_nivel_jedi (self):
-        """Realiza el barrido por nivel del arbol de jedis."""
-        pendientes = Cola()
-        pendientes.arribo(self)
-        while (not pendientes.cola_vacia()):
-            nodo = pendientes.atencion()
-            print('• Nombre:', nodo.datos['name'], ' | Rango:', nodo.datos['rank'], ' | Especie:', nodo.datos['species'], ' | Maestro(s):', nodo.datos['master'])
-            print ('  Color de sable de luz:', nodo.datos['lightsaber_color'], ' | Planeta natal:', nodo.datos['homeworld'], ' | Año de nacimiento:', nodo.datos['birth_year'], ' | Altura:', nodo.datos['height'])
-            if (nodo.izq is not None):
-                pendientes.arribo(nodo.izq)
-            if (nodo.der is not None):
-                pendientes.arribo(nodo.der)
-
 
 #! ----- COMIENZO FUNCIONES EJERCICIO 23 GUIA DE EJERCICIOS ----- #!
     

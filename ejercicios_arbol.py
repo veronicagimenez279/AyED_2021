@@ -283,8 +283,6 @@ arbol_criaturas.mostrar_informacion('Talos')
 print()
 
 #! ---- PUNTO D ----!#
-
-
 def ordenar(elemento):
     return elemento[1]
 
@@ -292,8 +290,6 @@ dic = {}
 arbol_criaturas.contador_criaturas_derrotadas(dic)
 lista = list(dic.items())
 lista.sort(key=ordenar, reverse=True)
-# print(lista[:3])
-
 
 print('Los 3 heroes o dioses que derrotaron a la mayor cantidad de criaturas son:')
 for i in range (3):
@@ -326,7 +322,6 @@ arbol_criaturas.busqueda_por_coincidencia(clave)
 print()
 
 #! ---- PUNTO J ----!#
-# j. eliminar al Basilisco y a las Sirenas;
 info, datos = arbol_criaturas.eliminar_nodo('Basilisco')
 print (info, 'ha sido eliminado')
 info, datos = arbol_criaturas.eliminar_nodo('Sirenas')
@@ -335,8 +330,6 @@ print()
 # arbol_criaturas.inorden_criaturas()
 
 #! ---- PUNTO K ----!#
-# k. modificar el nodo que contiene a las Aves del Estínfalo, agregando que Heracles
-# derroto a varias;
 pos = arbol_criaturas.busqueda('Aves del Estínfalo')
 if (pos):
     pos.datos['capturada'] = 'Heracles'
@@ -353,7 +346,6 @@ if (pos):
 # arbol_criaturas.inorden_criaturas()
 
 #! ---- PUNTO M ----!#
-# m. realizar un listado por nivel del árbol;
 print('Barrido por nivel del arbol:')
 arbol_criaturas.barrido_por_nivel()
 print()

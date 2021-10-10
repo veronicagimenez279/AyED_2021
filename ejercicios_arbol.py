@@ -76,13 +76,13 @@ print()
 arbol_heroes = Arbol()
 arbol_villanos = Arbol()
 
-arbol.separar_arbol(arbol_heroes, True)
+arbol_heroes = arbol.separar_arbol(arbol_heroes, True)
 print('Arbol de superheroes:')
 arbol_heroes.inorden()
 print('El arbol de superheroes tiene', arbol_heroes.contar_nodos(True), 'nodos.')
 print()
 
-arbol.separar_arbol(arbol_villanos, False)
+arbol_villanos = arbol.separar_arbol(arbol_villanos, False)
 print('Arbol de villanos:')
 arbol_villanos.inorden()
 print('El arbol de villanos tiene', arbol_villanos.contar_nodos(False), 'nodos.')
@@ -187,13 +187,14 @@ def decodificar (cadena_cod, arbol_huff):
 # #! ---- PUNTO C ----!#
 cadena = "NubladoBaja157"
 cadena_cod = codificar(cadena, dic)
-print (cadena_cod)
-print(decodificar(cadena_cod, arbol_huffman))
+print (cadena, 'codificada: ',cadena_cod)
+print(cadena_cod, 'decodificada:', decodificar(cadena_cod, arbol_huffman))
+print()
 
 # #! ---- PUNTO D ----!#
-from sys import getsizeof
-print('Tamaño de',cadena, ':', getsizeof(cadena))
-print('Tamaño de', cadena_cod, ':', getsizeof(b'1111001000111101010'))
+# from sys import getsizeof
+# print('Tamaño de',cadena, ':', getsizeof(cadena))
+# print('Tamaño de', cadena_cod, ':', getsizeof(b'1111001000110011101'))
 
 
 #! -------------------------- // EJERCICIO 23 // -------------------------- !#
@@ -285,13 +286,20 @@ print()
 
 #! ---- PUNTO D ----!#
 
+
+def ordenar(elemento):
+    return elemento[1]
+
 dic = {}
 arbol_criaturas.contador_criaturas_derrotadas(dic)
-dic = sorted(dic.items(), key=lambda criatura: criatura[1], reverse=True) #ordena el diccionario con la cant de capturas como criterio, de may a menor
+lista = list(dic.items())
+lista.sort(key=ordenar, reverse=True)
+# print(lista[:3])
+
 
 print('Los 3 heroes o dioses que derrotaron a la mayor cantidad de criaturas son:')
 for i in range (3):
-	print(dic[i][0], '(derroto a',  dic[i][1], 'criatura(s))')
+	print(lista[i][0], '(derroto a',  lista[i][1], 'criatura(s))')
 print()
 
 

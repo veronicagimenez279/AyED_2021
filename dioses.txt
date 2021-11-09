@@ -1,0 +1,47 @@
+nombre;padre;madre;hermanos;hijos;descripcion;genero;pareja
+Ouranos;-;Gaia;-;Themis/Mnemosyne/Hyperion/Theia/Krios/Kronos/Rhea/Koios/Phoibe/Iapetos/Okeanos/Tethys/Aphrodite;Dios y titán personificador del cielo.;M;Gaia
+Gaia;-;-;-;Ouranos/Themis/Mnemosyne/Hyperion/Theia/Krios/Kronos/Rhea/Koios/Phoibe/Iapetos/Okeanos/Tethys;Titan de la Tierra en la mitología griega.;F;Ouranos
+Themis;Ouranos;Gaia;Mnemosyne/Hyperion/Theia/Krios/Kronos/Rhea/Koios/Phoibe/Iapetos/Okeanos/Tethys/Aphrodite;-;La encarnación del orden divino, las leyes y las costumbres.;F;-
+Mnemosyne;Ouranos;Gaia;Themis/Hyperion/Theia/Krios/Kronos/Rhea/Koios/Phoibe/Iapetos/Okeanos/Tethys/Aphrodite;-;Diosa de la memoria y el lenguaje.;F;-
+Hyperion;Ouranos;Gaia;Themis/Mnemosyne/Theia/Krios/Kronos/Rhea/Koios/Phoibe/Iapetos/Okeanos/Tethys/Aphrodite;Helios/Eos/Selene;Titán de la luz celestial.;M;Theia
+Theia;Ouranos;Gaia;Themis/Mnemosyne/Hyperion/Krios/Kronos/Rhea/Koios/Phoibe/Iapetos/Okeanos/Tethys/Aphrodite;Helios/Eos/Selene;Titán de la vista, el oro, la plata, las gemas con brillo y valor intrínseco, y los cuerpos celestiales.;F;Hyperion
+Krios;Ouranos;Gaia;Themis/Mnemosyne/Hyperion/Theia/Kronos/Rhea/Koios/Phoibe/Iapetos/Okeanos/Tethys/Aphrodite;-;Titán del Sur y el señorío o la dominación.;M;-
+Kronos;Ouranos;Gaia;Themis/Mnemosyne/Hyperion/Theia/Krios/Rhea/Koios/Phoibe/Iapetos/Okeanos/Tethys/Aphrodite;Hades/Demeter/Poseidon/Hestia/Hera/Zeus;Pertenece a la primera generación de titanes. El más joven de los descendientes de Gea y Urano.;M;Rhea
+Rhea;Ouranos;Gaia;Themis/Mnemosyne/Hyperion/Theia/Krios/Kronos/Koios/Phoibe/Iapetos/Okeanos/Tethys/Aphrodite;Hades/Demeter/Poseidon/Hestia/Hera/Zeus;Diosa de la naturaleza y la fecundidad.;F;Kronos
+Koios;Ouranos;Gaia;Themis/Mnemosyne/Hyperion/Theia/Krios/Kronos/Rhea/Phoibe/Iapetos/Okeanos/Tethys/Aphrodite;Leto;Titán de la inteligencia.;M;Phoibe
+Phoibe;Ouranos;Gaia;Themis/Mnemosyne/Hyperion/Theia/Krios/Kronos/Rhea/Koios/Iapetos/Okeanos/Tethys/Aphrodite;Leto;Una de las titánides originales, descendientes de Urano y Gea.;F;Koios
+Iapetos;Ouranos;Gaia;Themis/Mnemosyne/Hyperion/Theia/Krios/Kronos/Rhea/Koios/Phoibe/Okeanos/Tethys/Aphrodite;Prometheus/Epimetheus/Atlas;Titán de la mortal vida útil.;M;-
+Okeanos;Ouranos;Gaia;Themis/Mnemosyne/Hyperion/Theia/Krios/Kronos/Rhea/Koios/Phoibe/Iapetos/Tethys/Aphrodite;Pleione;Titan que representaba al océano mundial.;M;Tethys
+Tethys;Ouranos;Gaia;Themis/Mnemosyne/Hyperion/Theia/Krios/Kronos/Rhea/Koios/Phoibe/Iapetos/Okeanos/Aphrodite;Pleione;Titánide y Diosa del Mar, compartiendo el dominio sobre éste junto con su esposo y hermano Océano.;F;Okeanos
+Aphrodite;Ouranos;-;Themis/Mnemosyne/Hyperion/Theia/Krios/Kronos/Rhea/Koios/Phoibe/Iapetos/Okeanos/Tethys;Phobos/Deimos/Eros/Himeros/Hermaphrodite;Diosa griega del amor, la belleza, el placer y la procreación.;F;Hephaistos
+Helios;Hyperion;Theia;Eos/Selene;-;Personificación del Sol.;M;-
+Eos;Hyperion;Theia;Helios/Selene;-;Diosa titánide​ de la aurora.;F;-
+Selene;Hyperion;Theia;Helios/Eos;-;Personificación de la Luna.;F;-
+Hades;Kronos;Rhea;Demeter/Poseidon/Hestia/Hera/Zeus;-;Dios del Inframundo.;M;Persephone
+Demeter;Kronos;Rhea;Hades/Poseidon/Hestia/Hera/Zeus;Persephone;Diosa de la cosecha y agricultura.;F;-
+Poseidon;Kronos;Rhea;Hades/Demeter/Hestia/Hera/Zeus;-;Dios del mar.;M;-
+Hestia;Kronos;Rhea;Hades/Demeter/Poseidon/Hera/Zeus;-;Diosa virgen de la chimenea, arquitectura y del ordenamiento correcto de la domesticidad, la familia, el hogar y el estado.;F;-
+Hera;Kronos;Rhea;Hades/Demeter/Poseidon/Hestia/Zeus;Hephaistos/Ares;Diosa de las mujeres y el matrimonio.;F;Zeus
+Zeus;Kronos;Rhea;Hades/Demeter/Poseidon/Hestia/Hera;Hephaistos/Ares/Persephone/Apollo/Artemis/Dionysos/Hermes/Athena;Rey de los dioses y los hombres.;M;Hera
+Leto;Koios;Phoibe;-;Apollo/Artemis;Representaba la noche oscura y sin estrellas.;F;-
+Prometheus;Iapetos;-;Epimetheus/Atlas;-;Titán amigo de los mortales.;M;-
+Epimetheus;Iapetos;-;Prometheus/Atlas;-;Titán del pensamiento tardío.;M;-
+Atlas;Iapetos;-;Prometheus/Epimetheus;Maia;Titán responsable de llevar el peso de los cielos sobre sus hombros;M;Pleione
+Pleione;Okeanos;Tethys;-;Maia;Como hija de Océano y Tetis es una oceánide, una ninfa acuática.;F;Atlas
+Semele;-;-;-;Dionysos;Semele era la hija de Cadmo y Harmonía, además de ser la madre de Dioniso.;F;-
+Penelopeia;-;-;-;Pan;Hija del rey Ícaro de Esparta y de la ninfa Periboa. Fue la esposa de Odiseo.;F;-
+Maia;Atlas;Pleione;-;Hermes;Mayor de las Pléyades, las siete hijas de Atlas y Pléyone.;F;-
+Hephaistos;Zeus;Hera;Ares/Persephone/Apollo/Artemis/Dionysos/Hermes/Athena;-;Dios griego de los herreros, artesanos, escultores, metales, metalurgia, fuego y volcanes.;M;Aphrodite
+Ares;Zeus;Hera;Hephaistos/Persephone/Apollo/Artemis/Dionysos/Hermes/Athena;Phobos/Deimos/Eros/Himeros;Dios de la guerra.;M;-
+Persephone;Zeus;Demeter;Hephaistos/Ares/Apollo/Artemis/Dionysos/Hermes/Athena;-;Diosa de la vegetación y reina del Inframundo.;F;Hades
+Apollo;Zeus;Leto;Hephaistos/Ares/Persephone/Artemis/Dionysos/Hermes/Athena;-;Dios de la música, la verdad y profecía, la curación, el Sol y la luz, la plaga y poesía.;M;-
+Artemis;Zeus;Leto;Hephaistos/Ares/Persephone/Apollo/Dionysos/Hermes/Athena;-;Diosa helena de la caza, los animales salvajes, la naturaleza, el parto, la virginidad y protectora de las jóvenes.;F;-
+Dionysos;Zeus;Semele;Hephaistos/Ares/Persephone/Apollo/Artemis/Hermes/Athena;-;Dios de la vendimia, vinificación y el vino, la locura ritual, la fertilidad, el éxtasis religioso y teatral.;M;-
+Hermes;Zeus;Maia;Hephaistos/Ares/Persephone/Apollo/Artemis/Dionysos/Athena;Pan;Dios griego de los mensajeros, viajeros, ladrones, caminos y mercaderes.;M;-
+Athena;Zeus;-;Hephaistos/Ares/Persephone/Apollo/Artemis/Dionysos/Hermes;-;Diosa de la guerra, civilización, sabiduría, estrategia, de las artes, de la justicia y de la habilidad.;F;-
+Phobos;Ares;Aphrodite;Deimos/Eros/Himeros/Hermaphrodite;-;La personificación del miedo.;M;-
+Deimos;Ares;Aphrodite;Phobos/Eros/Himeros/Hermaphrodite;-;La personificación del terror.;M;-
+Eros;Ares;Aphrodite;Phobos/Deimos/Himeros/Hermaphrodite;-;Dios del amor.;M;-
+Himeros;Ares;Aphrodite;Phobos/Deimos/Eros/Hermaphrodite;-;La personificación de la sensualidad, la lujuria y el deseo sexual.;M;-
+Hermaphrodite;Hermes;Aphrodite;Phobos/Deimos/Eros/Himeros;-;Hijo de Afrodita y de Hermes, en honor de los cuales recibió el nombre.;M;-
+Pan;Hermes;Penelopeia;-;-;Dios de los pastores y rebaños.;M;-

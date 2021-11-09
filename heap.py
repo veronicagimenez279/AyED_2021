@@ -25,7 +25,9 @@ class HeapMax(object):
         self.elementos[0], self.elementos[self.tamanio-1] = self.elementos[self.tamanio-1], self.elementos[0]
         self.tamanio -= 1
         self.hundir()
-        return self.elementos[self.tamanio]
+        dato = self.elementos[self.tamanio]
+        self.elementos.pop()
+        return dato
         
     def hundir (self, indice=0):
         hijo_izq = indice * 2 + 1
@@ -95,7 +97,9 @@ class HeapMin(object):
         self.elementos[0], self.elementos[self.tamanio-1] = self.elementos[self.tamanio-1], self.elementos[0]
         self.tamanio -= 1
         self.hundir()
-        return self.elementos[self.tamanio]
+        dato = self.elementos[self.tamanio]
+        self.elementos.pop()
+        return dato
         
 
     def hundir (self, indice=0):

@@ -104,6 +104,7 @@ eliminar_personaje_despues(cola_personajes, 'Jar Jar Binks')
 
 while not cola_personajes.cola_vacia():
     print (cola_personajes.atencion())
+print()
 
 #!-----------------------//EJERCICIO 12//----------------------------!#
 # Dada dos colas con valores ordenadas, realizar un algoritmo que permita combinarlas en una
@@ -139,7 +140,7 @@ while not cola2.cola_vacia(): #para cuando la segunda cola tiene mas elementos q
 while not cola3.cola_vacia():
     print (cola3.atencion())
 
-
+print()
 
 #!-----------------------//EJERCICIO 16//----------------------------!#
 
